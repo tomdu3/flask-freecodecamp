@@ -13,7 +13,8 @@ class Todo(db.Model):
     date_created = db.Column(db.DateTime, default=datetime.utcnow)
 
     def __repr__(self):
-        return '<Task %r>' % self.id
+        return f'<Task {self.id}>'
+# https://www.youtube.com/watch?v=Ny1g-Wk5nyM (db creation)
 
 
 @app.route('/')
