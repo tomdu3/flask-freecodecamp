@@ -17,7 +17,7 @@ class Todo(db.Model):
 # https://www.youtube.com/watch?v=Ny1g-Wk5nyM (db creation)
 
 
-@app.route('/')
+@app.route('/', methods=['POST', 'GET'])
 def index():
     return render_template('index.html')
 
