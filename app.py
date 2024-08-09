@@ -17,6 +17,10 @@ class Todo(db.Model):
 # https://www.youtube.com/watch?v=Ny1g-Wk5nyM (db creation)
 
 
+# create database if does not exist
+with app.app_context():
+    db.create_all()
+
 @app.route('/', methods=['POST', 'GET'])
 def index():
     if request.method == 'POST':
